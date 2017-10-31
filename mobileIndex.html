@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel = "stylesheet" type = "text/css" href = "css/DrinkDrankDrunk.css">
+	<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src = "javascript/DrinkDrankDrunk.js"></script>
+	<title>Drink Drank Drunk</title>
+</head>
+<body>
+
+	<div id = "Header">
+		<div id = "MenuTitle">Menu</div>
+	</div>
+
+	<div id = "ContentPane">
+		<div id = "Menu" class = "Menu">
+			<div class = "MenuItem">Restaurants</div>
+			<div class = "MenuItem">Login</div>
+			<div class = "MenuItem"></div>
+		</div>
+		<script>
+			$(document).ready(function(){
+				$.get(	"http://localhost/DrinkDrankDrunk.com/php/restaurants.php",
+    					{},
+    					function(data){
+						$("#ContentPane").append(data);
+					});
+				});
+		</script>
+	</div>
+	
+	<div id = "Footer">
+	
+	</div>
+
+</body>
+</html>
