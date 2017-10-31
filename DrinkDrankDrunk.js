@@ -15,3 +15,12 @@ $(document).ready(function(){
         $("#Menu").slideUp("slow");
     });
 });
+
+function getMenu(restaurantId){
+    $.get(  "http://localhost/DrinkDrankDrunk.com/php/menuCategories.php",
+            {"Restaurant ID" : restaurantId},
+            function(data){
+                $("#ContentPane").empty();
+                $("#ContentPane").append(data);
+    });
+}
