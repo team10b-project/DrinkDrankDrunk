@@ -1,0 +1,134 @@
+#Header {
+    border: 3px solid #000;
+    width: 100%;
+    height: 17%;
+    min-height: 100px;
+    background-size: 100% 100%;
+    background-image: url('images/2.jpg');
+    opacity: 0.95;
+}
+
+ul {
+    list-style-type: none;
+    margin: 50;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+}
+
+li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: underline;
+    }
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+            background-color: #111;
+        }
+
+#HomePane {
+    border-left: 3px solid #000;
+    border-right: 3px solid #000;
+    width: 100%;
+    height: 66%;
+    min-height: 400px;
+    overflow-y: scroll;
+    background-image: url('images/8.jpg');
+    /*background: -moz-linear-gradient(top, purple, blue);*/
+    background-size: 100% 100%;
+    opacity: 0.8;
+}
+
+#BarPane {
+    border-left: 3px solid #000;
+    border-right: 3px solid #000;
+    width: 100%;
+    height: 66%;
+    min-height: 400px;
+    overflow-y: scroll;
+    background-image: url('images/3.jpg');
+    /*background: -moz-linear-gradient(top, purple, blue);*/
+    background-size: 100% 100%;
+    opacity: 0.8;
+}
+
+#SpecialsPane {
+    border-left: 3px solid #000;
+    border-right: 3px solid #000;
+    width: 100%;
+    height: 66%;
+    min-height: 400px;
+    overflow-y: scroll;
+    background-image: url('images/6.jpg');
+    /*background: -moz-linear-gradient(top, purple, blue);*/
+    background-size: 100% 100%;
+    opacity: 0.8;
+}
+
+#GamesPane {
+    border-left: 3px solid #000;
+    border-right: 3px solid #000;
+    width: 100%;
+    height: 66%;
+    min-height: 400px;
+    overflow-y: scroll;
+    background-image: url('images/6.jpg');
+    /*background: -moz-linear-gradient(top, purple, blue);*/
+    background-size: 100% 100%;
+    opacity: 0.8;
+}
+
+#AboutPane {
+    border-left: 3px solid #000;
+    border-right: 3px solid #000;
+    width: 100%;
+    height: 66%;
+    min-height: 400px;
+    overflow-y: scroll;
+    background-image: url('images/10.jpg');
+    /*background: -moz-linear-gradient(top, purple, blue);*/
+    background-size: 100% 100%;
+    opacity: 0.8;
+}
+
+#SignInPane {
+    border-left: 3px solid #000;
+    border-right: 3px solid #000;
+    width: 100%;
+    height: 66%;
+    min-height: 400px;
+    overflow-y: scroll;
+    background-image: url('images/6.jpg');
+    /*background: -moz-linear-gradient(top, purple, blue);*/
+    background-size: 100% 100%;
+    opacity: 0.8;
+}
+
+#Footer {
+    border: 3px solid #000;
+    width: 100%;
+    height: 17%;
+    min-height: 100px;
+    background-image: url('images/1.jpg');
+    background-size: 100% 100%;
+    opacity: 0.95;
+}
+
+#CollegeBarPane {
+    border-left: 3px solid #000;
+    border-right: 3px solid #000;
+    width: 100%;
+    height: 66%;
+    min-height: 400px;
+    overflow-y: scroll;
+    background-image: url('images/college bar.jpg');
+    /*background: -moz-linear-gradient(top, purple, blue);*/
+    background-size: 100% 100%;
+    opacity: 0.9;
+}
