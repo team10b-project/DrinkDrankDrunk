@@ -7,31 +7,22 @@
 	<title>Drink Drank Drunk</title>
 </head>
 <body>
-
+<div id = "Wrapper">
 	<div id = "Header">
 		<div id = "MenuTitle">Menu</div>
 	</div>
 
 	<div id = "ContentPane">
-		<div id = "Menu" class = "Menu">
-			<div class = "MenuItem">Restaurants</div>
-			<div class = "MenuItem">Login</div>
-			<div class = "MenuItem"></div>
-		</div>
 		<script>
 			$(document).ready(function(){
-				$.get(	"http://localhost/DrinkDrankDrunk.com/php/restaurants.php",
-    					{},
-    					function(data){
-						$("#ContentPane").append(data);
-					});
-				});
+				getRestaurants();
+			});
 		</script>
 	</div>
 	
 	<div id = "Footer">
 	
 	</div>
-
+</div>
 </body>
 </html>

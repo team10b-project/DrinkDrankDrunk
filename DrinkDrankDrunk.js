@@ -17,8 +17,35 @@ $(document).ready(function(){
 });
 
 function getMenu(restaurantId){
-    $.get(  "http://localhost/DrinkDrankDrunk.com/php/menuCategories.php",
+    $.get(  "http://localhost/DrinkDrankDrunk.com/php/menu.php",
             {"Restaurant ID" : restaurantId},
+            function(data){
+                $("#ContentPane").empty();
+                $("#ContentPane").append(data);
+    });
+}
+
+function getMenuCategory(menuCategoryId){
+    $.get(  "http://localhost/DrinkDrankDrunk.com/php/menuCategory.php",
+            {"Menu Category ID" : menuCategoryId},
+            function(data){
+                $("#ContentPane").empty();
+                $("#ContentPane").append(data);
+    });
+}
+
+function getItem(itemId){
+    $.get(  "http://localhost/DrinkDrankDrunk.com/php/item.php",
+            {"Item ID" : itemId},
+            function(data){
+                $("#ContentPane").empty();
+                $("#ContentPane").append(data);
+    });
+}
+
+function getRestaurants(){
+    $.get(  "http://localhost/DrinkDrankDrunk.com/php/restaurants.php",
+            {},
             function(data){
                 $("#ContentPane").empty();
                 $("#ContentPane").append(data);
