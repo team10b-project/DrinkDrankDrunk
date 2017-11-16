@@ -1,20 +1,21 @@
 CREATE TABLE users (
   user_id int NOT NULL AUTO_INCREMENT,
-  firstname varchar(30),
-  lastname varchar(30),
-  picture varchar(80),
-  email varchar(30),
+  firstname varchar(100),
+  lastname varchar(100),
+  picture varchar(100),
+  email varchar(100),
   age tinyint,
   description varchar(200),
+  administrator BOOLEAN,
   PRIMARY KEY (user_id)
 );
 
-CREATE TABLE restaurant (
+CREATE TABLE restaurants (
   restaurant_id int NOT NULL AUTO_INCREMENT,
-  name varchar(30),
-  picture varchar(80),
-  address varchar(40),
-  email varchar(40),
+  name varchar(100),
+  picture varchar(100),
+  address varchar(100),
+  email varchar(100),
   biography text,
   PRIMARY KEY (restaurant_id)
 );
@@ -26,26 +27,26 @@ CREATE TABLE patronage (
   CONSTRAINT FK_user_pat FOREIGN KEY (user_id)
   REFERENCES users(user_id),
   CONSTRAINT FK_restaurant_pat FOREIGN KEY (restaurant_id)
-  REFERENCES restaurant(restaurant_id)
+  REFERENCES restaurants(restaurant_id)
 );
 
 CREATE TABLE menu_categories (
   menucat_id int NOT NULL AUTO_INCREMENT,
   restaurant_id int,
-  name varchar(30),
-  picture varchar(80),
+  name varchar(100),
+  picture varchar(100),
   description text,
   PRIMARY KEY (menucat_id),
   CONSTRAINT FK_cat_restaurant FOREIGN KEY (restaurant_id)
-  REFERENCES restaurant(restaurant_id)
+  REFERENCES restaurants(restaurant_id)
 );
 
-CREATE TABLE menu_item (
+CREATE TABLE menu_items (
   menuitem_id int NOT NULL AUTO_INCREMENT,
   menucat_id int,
-  name varchar(30),
-  picture varchar(80),
-  description varchar(40),
+  name varchar(100),
+  picture varchar(100),
+  description varchar(100),
   price decimal(4,2),
   PRIMARY KEY (menuitem_id),
   CONSTRAINT FK_item_category FOREIGN KEY (menucat_id)
@@ -58,12 +59,12 @@ CREATE TABLE ingredients (
   PRIMARY KEY (ingredient_id)
 );
 
-CREATE TABLE recipes(
+CREATE TABLE recipes (
   menuitem_id int,
   ingredient_id int,
   PRIMARY KEY (menuitem_id, ingredient_id),
   CONSTRAINT FK_recipe_item FOREIGN KEY (menuitem_id)
-  REFERENCES menu_item(menuitem_id),
+  REFERENCES menu_items(menuitem_id),
   CONSTRAINT FK_recipe_ingredient FOREIGN KEY (ingredient_id)
   REFERENCES ingredients(ingredient_id)
 );

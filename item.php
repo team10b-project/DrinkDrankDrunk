@@ -1,8 +1,16 @@
+
 <?php
-/**
-max ingredient length 11 chars
-**/
-$item = [1];
+
+$dbc = mysqli_connect('localhost','root','','drinkdrankdrunk')
+or die('Error connecting to MySQL server.');
+$query = 'SELECT * FROM menu_items WHERE menuitem_id = "'.$_GET['itemId'].'"';
+$result = mysqli_query($dbc, $query) or die('Error querying database.');
+mysqli_close($dbc);
+
+
+$item = mysqli_fetch_all($results);
+echo $item;
+
 echo 	'<div id = "Menu" class = "Menu">
 			<div id = "Restaurants" class = "MenuItem" onclick = "getRestaurants();">Restaurants</div>
 			<div class = "MenuItem">Login</div>
